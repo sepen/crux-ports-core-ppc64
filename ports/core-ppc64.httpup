@@ -1,0 +1,8 @@
+#
+# /etc/ports/core-ppc64.httpup: Unofficial core ports for CRUX PPC64
+#
+
+ROOT_DIR=/usr/ports/core-ppc64
+URL=https://raw.githubusercontent.com/sepen/crux-ports-core-ppc64/3.8/
+
+# End of file

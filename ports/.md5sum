@@ -1,0 +1,12 @@
+804bb419e539a70ad80e4c03df3c3411  contrib.pub
+ffcfbdbd1979f51825fa796a6296d1ab  contrib.rsync.inactive
+b61f626c2507fabce174d658436d1d99  core-ppc64.httpup
+b8dd0aad383810cad920d6548cd1cb56  core.pub
+9a7ec7bdf5155fbedb02b35e50420cfa  core.rsync
+5d87cebfae0346620cd455eeef5f9e08  opt-ppc64.httpup
+0d1f1fde50a9bd743d9cac6b235f038c  opt.pub
+92891482d508900cd6208bdad41f549d  opt.rsync
+902e3ddb9b4930975c7edb5c3c749c8c  ports-1.6.tar.gz
+f3e07a815bbbc1905c7910b4d7c0faa5  xorg-ppc64.httpup
+69927e5d0ae5dc3455faeaac916c4db2  xorg.pub
+939e6f38e938a2ba615e76f40b504c79  xorg.rsync
