@@ -1,0 +1,69 @@
+# Description: The GNU Compiler Collection
+# URL: https://gcc.gnu.org
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Arch Maintainer: Jose Beneyto, sepen at crux-arm dot nu
+# Depends on: libmpc zstd
+
+name=gcc
+version=14.3.0
+release=1
+source=(https://sourceware.org/pub/gcc/releases/gcc-$version/$name-$version.tar.xz
+    $name-nocheck-fixincludes.patch)
+
+build() {
+    patch -d $name-$version -p1 -i $SRC/$name-nocheck-fixincludes.patch
+
+    # pipe fails tests
+    CFLAGS=${CFLAGS/-pipe/}
+    CXXFLAGS=${CXXFLAGS/-pipe/}
+
+    mkdir build
+    cd build
+    ../$name-$version/configure \
+        --prefix=/usr \
+        --libexecdir=/usr/lib \
+        --enable-threads=posix \
+        --with-linker-hash-style=gnu \
+        --with-system-zlib \
+        --enable-languages=c,c++ \
+        --enable-link-serialization=1 \
+        --enable-linker-build-id \
+        --enable-gnu-indirect-function \
+        --enable-__cxa_atexit \
+        --enable-clocale=gnu \
+        --enable-shared \
+	--enable-plugin \
+        --enable-default-pie \
+        --enable-default-ssp \
+        --enable-host-pie \
+        --with-pkgversion="CRUX-PPC64" \
+        --with-x=no \
+	--disable-multilib \
+        --disable-fixincludes \
+        --disable-nls
+
+    make -O STAGE1_CFLAGS="-O2" \
+        BOOT_CFLAGS="$CFLAGS" \
+        BOOT_LDFLAGS="$LDFLAGS" \
+        LDFLAGS_FOR_TARGET="$LDFLAGS" \
+	bootstrap
+    make -j1 DESTDIR=$PKG install
+
+    install -d $PKG/lib
+    ln -sf ../usr/bin/cpp $PKG/lib/cpp
+    ln -sf gcc $PKG/usr/bin/cc
+    ln -sf g++ $PKG/usr/bin/c++
+
+    rm -r $PKG/usr/share/{info,$name-$version}
+    rm -r $PKG/usr/bin/*-linux-gnu-*
+    rm -r $PKG/usr/lib/gcc/*/$version/{install-tools,include-fixed}
+
+    install -d -m 0755 $PKG/usr/share/gdb/auto-load/usr/lib
+    mv $PKG/usr/lib*/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/lib
+
+    mkdir $PKG/usr/lib/bfd-plugins
+    ln -sfv ../../lib/gcc/$($PKG/usr/bin/gcc -dumpmachine)/$version/liblto_plugin.so \
+        $PKG/usr/lib/bfd-plugins/
+
+    sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib*/{libstdc++.la,libsupc++.la}
+}
