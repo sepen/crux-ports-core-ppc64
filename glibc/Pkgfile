@@ -42,7 +42,6 @@ build() {
         --disable-profile \
         --disable-werror \
         --without-gd
-
     make
     #make check
     make install_root=$PKG install
