@@ -6,6 +6,7 @@ d:libcap
 d:pkgconf
 d:libgmp
 d:gcc
+d:pkgutils
 d:util-linux
 d:ports
 f:f0ada8de26d288c43a0fe3f835881081:openssl/Pkgfile
@@ -57,6 +58,10 @@ f:6e3990d2651e7617bb7aa74509ace2d2:gcc/Pkgfile
 f:43f1ffdbfab50eb0e497cc80d7b75528:gcc/.footprint
 f:f4f22eabd23ea90f7ca1739a29fa2728:gcc/.md5sum
 f:7c9128522053af79791bcfdd55834c2a:gcc/gcc-nocheck-fixincludes.patch
+f:96224150d97a1a476f0dd5b32eb17639:pkgutils/Pkgfile
+f:0e1717fd1eeb62d8fce0c23682e9b337:pkgutils/.footprint
+f:f3a1072d3b7f8ad6bd3af78857ccf2d7:pkgutils/.md5sum
+f:043dc64391b27532df39a2b979680178:pkgutils/pkgmk.conf
 f:8baff048c45cabe3fefdd36a93bda7a2:util-linux/bits
 f:c04c497e15c1e9b60bc8d6ca8d8733b7:util-linux/Pkgfile
 f:2477d66a3f62e0035f3d3775d6f1812d:util-linux/.footprint
