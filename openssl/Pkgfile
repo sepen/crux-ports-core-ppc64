@@ -1,0 +1,38 @@
+# Description: Secure Sockets Layer and Transport Layer Security tools
+# URL: https://www.openssl.org/
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Arch Maintainer: Jose Beneyto, sepen at crux-arm dot nu
+# Depends on:
+
+name=openssl
+version=3.6.1
+release=1
+source=(https://github.com/openssl/openssl/releases/download/$name-$version/$name-$version.tar.gz
+    mksslcert.sh)
+
+build() {
+    cd $name-$version
+
+    ./Configure linux-ppc64 \
+        --prefix=/usr \
+        --libdir=lib \
+        --openssldir=/etc/ssl \
+        enable-camellia \
+        enable-seed \
+        enable-rfc3779 \
+        shared \
+        threads \
+        zlib \
+        no-mdc2 no-ec2m no-sm2 no-sm4 \
+        no-asm \
+        disable-tests
+
+    sed -i Makefile -e "s|-O3|$CFLAGS|"
+
+    make depend
+    make
+    make MANSUFFIX=ssl DESTDIR=$PKG install_sw install_ssldirs install_man_docs
+
+    find $PKG -name "*fips*" -delete
+    install -D -m 755 $SRC/mksslcert.sh $PKG/usr/bin/mksslcert
+}

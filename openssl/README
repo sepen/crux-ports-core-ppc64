@@ -1,0 +1,21 @@
+# README for openssl
+
+
+## PowerPC64 Big-Endian Notice
+
+When building OpenSSL on **ppc64 (big-endian)** systems, the configuration option
+`enable-ec_nistp_64_gcc_128` must **not be used**.
+
+This optimization is designed for **little-endian architectures** and relies on
+arithmetic assumptions that are not valid on big-endian platforms. OpenSSL
+explicitly prevents its use and the build will fail with an error similar to:
+
+    error: "Can not enable ec_nistp_64_gcc_128 on big-endian systems"
+
+Since this project targets **ppc64 big-endian**, this option has been
+intentionally removed from the build configuration.
+
+This does **not affect normal cryptographic functionality or performance**.
+OpenSSL still enables PowerPC-specific assembly implementations and runtime CPU
+feature detection for algorithms such as AES, SHA, and GHASH when building with
+the `linux-ppc64` target.
