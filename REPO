@@ -40,7 +40,7 @@ f:d41d8cd98f00b204e9800998ecf8427e:filesystem/motd
 f:aa2637d5684ce5f56da5e114e964f5b0:filesystem/.md5sum
 f:4faaa4e1ba24038f8638a0cae5046cfb:filesystem/securetty
 f:0a95168141f383d4b9af52f51d99ddfb:python3/Pkgfile
-f:bf3a839b975e7dac039d8419a89802a9:python3/.footprint
+f:f1f4b158bae404051330f52b47266e6a:python3/.footprint
 f:40c3717bb62d89c7d99b301ea02d82b4:python3/.md5sum
 f:6c386523a003db23b3e0c390c0827fa0:libcap/Pkgfile
 f:8acfeaec659105a7dcd563fcf5fb29e7:libcap/.footprint
