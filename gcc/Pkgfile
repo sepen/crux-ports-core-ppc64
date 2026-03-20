@@ -25,28 +25,28 @@ build() {
         --enable-threads=posix \
         --with-linker-hash-style=gnu \
         --with-system-zlib \
-        --enable-languages=c,c++ \
+        --enable-languages=c,c++,lto \
         --enable-link-serialization=1 \
         --enable-linker-build-id \
         --enable-gnu-indirect-function \
         --enable-__cxa_atexit \
         --enable-clocale=gnu \
+        --enable-lto \
         --enable-shared \
-	--enable-plugin \
+        --enable-plugin \
         --enable-default-pie \
         --enable-default-ssp \
         --enable-host-pie \
         --with-pkgversion="CRUX-PPC64" \
         --with-x=no \
-	--disable-multilib \
+        --disable-multilib \
         --disable-fixincludes \
         --disable-nls
 
     make -O STAGE1_CFLAGS="-O2" \
         BOOT_CFLAGS="$CFLAGS" \
         BOOT_LDFLAGS="$LDFLAGS" \
-        LDFLAGS_FOR_TARGET="$LDFLAGS" \
-	bootstrap
+        LDFLAGS_FOR_TARGET="$LDFLAGS"
     make -j1 DESTDIR=$PKG install
 
     install -d $PKG/lib
