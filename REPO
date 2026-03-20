@@ -1,4 +1,5 @@
 d:prt-get
+d:kbd
 d:openssl
 d:glibc
 d:filesystem
@@ -16,6 +17,9 @@ f:077fea960d8a490412eed744ce9bcc40:prt-get/.footprint
 f:5536fff65be51e094b05a2c051c95364:prt-get/README
 f:ac750b56369121ca6aad64dd4c03671b:prt-get/prt-get.aliases
 f:2735e69dbb2ffaba20787f74759478c2:prt-get/.md5sum
+f:b5a0b950a8a8af230963c32d27458786:kbd/Pkgfile
+f:78f62461eb778cea149a4f9966ea0c91:kbd/.footprint
+f:ec63d1b934a495b6d37650bd2c8047cb:kbd/.md5sum
 f:f0ada8de26d288c43a0fe3f835881081:openssl/Pkgfile
 f:216210d460a79de7cb937b1f51f4da63:openssl/.footprint
 f:f517ee1d7a3851bc5f61eda75a760615:openssl/README
