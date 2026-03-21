@@ -2,6 +2,7 @@ d:prt-get
 d:kbd
 d:openssl
 d:glibc
+d:hfsutils
 d:filesystem
 d:python3
 d:libcap
@@ -39,6 +40,9 @@ f:22c6377296481e3fb2d5b9d0823f3ba9:glibc/.md5sum
 f:ffd59b0f7c8b5d66cdc3a5f33fa50e57:glibc/glibc-2.39-fhs-1.patch
 f:f7fefce570a3c776e26e778c5e401490:glibc/ld.so.conf
 f:5d37085c6a7714fcc5443f05a07a873d:glibc/.nostrip
+f:77e5506df20fed677d92c73aed02f41a:hfsutils/Pkgfile
+f:8f2ea8e40a1c5b0b7f012f14ff093982:hfsutils/.footprint
+f:9da90c8c8a9c893094e5e130a036287f:hfsutils/.md5sum
 f:915cf64e2ab613887db6ce2e2c41eeb4:filesystem/fstab
 f:f905c9e31796fb1528316f66c1841397:filesystem/Pkgfile
 f:346ede8d637940e2898cd29c56a37d30:filesystem/mime.types
