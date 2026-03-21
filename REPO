@@ -81,7 +81,6 @@ f:dd0dd04aabc5739e4c9224aa7320e0e3:mac-fdisk/.footprint
 f:de7710807fb180c066bbd014f68e0d64:mac-fdisk/mac-fdisk-0.1_p16-ppc64.patch
 f:186f12f4cbdb510acff893d4b411ed1c:mac-fdisk/big_pt.patch
 f:562fc43700f30f2d7ee9556c493e29ea:mac-fdisk/.md5sum
-f:a56e666344ff414173f485014900256d:mac-fdisk/mac-fdisk-amd64.patch
 f:0a4dbdc46db2a3671528ee2b7fd2b854:mac-fdisk/largerthan2gb.patch
 f:ac39a9ed979ffa426cc516f78e6f73ee:mac-fdisk/mac-fdisk-0.1_p18-lseek64.patch
 f:96224150d97a1a476f0dd5b32eb17639:pkgutils/Pkgfile
