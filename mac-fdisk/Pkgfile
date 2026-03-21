@@ -1,0 +1,36 @@
+# Description:
+# Name: mac-fdisk
+# URL: ftp://ftp.mklinux.apple.com/pub/Other_Tools/
+# Maintainer: Jose Beneyto, sepen at crux-arm dot nu
+# Depends on:
+
+name=mac-fdisk
+version=0.1
+release=1
+source=(http://ftp.us.debian.org/debian/pool/main/m/${name}/${name}_${version}.orig.tar.gz
+  http://ftp.us.debian.org/debian/pool/main/m/${name}/${name}_${version}-18.diff.gz
+  largerthan2gb.patch ${name}-${version}-headers.patch ${name}-${version}_p16-ppc64.patch
+  big_pt.patch ${name}-${version}_p16-ppc-inline.patch ${name}-${version}_p18-lseek64.patch)
+
+build() {
+  cd $name-$version.orig
+
+  gunzip $SRC/mac-fdisk_0.1-18.diff.gz
+  patch -p1 -i $SRC/${name}_${version}-18.diff
+  patch -p1 -i $SRC/largerthan2gb.patch
+  patch -p1 -i $SRC/${name}-${version}-headers.patch
+  patch -p1 -i $SRC/${name}-${version}_p16-ppc64.patch
+  patch -p1 -i $SRC/big_pt.patch
+  patch -p1 -i $SRC/${name}-${version}_p16-ppc-inline.patch
+  patch -p1 -i $SRC/${name}-${version}_p18-lseek64.patch
+
+  export CFLAGS="${CFLAGS} -Wno-error=format-security" # io.c fails without this
+  make
+
+  install -Dm 755 pdisk $PKG/usr/bin/pdisk
+  gzip pdisk.8
+  install -Dm 644 pdisk.8.gz $PKG/usr/share/man/man8/pdisk.8.gz
+}
+
+
+mac-fdisk_0.1-18.diff
