@@ -1,0 +1,28 @@
+# Description: HFS FS Access utils
+# URL: https://www.mars.org/home/rob/proj/hfs/
+# Maintainer: Jose Beneyto, sepen at crux-arm dot nu
+# Depends on:
+
+name=hfsutils
+version=3.2.6
+release=1
+source=(https://deb.debian.org/debian/pool/main/h/$name/${name}_${version}.orig.tar.gz
+	https://deb.debian.org/debian/pool/main/h/$name/${name}_${version}-16.debian.tar.xz)
+
+build() {
+  for i in debian/patches/*.patch; do
+    patch -Np1 -d $SRC/$name-$version -i $SRC/$i
+  done
+
+  cd $name-$version
+
+  autoreconf -fi
+  CFLAGS="$CFLAGS -Wno-error=incompatible-pointer-types"
+  ./configure
+
+  make
+  make -C hfsck
+
+  install -d $PKG/usr/bin $PKG/usr/share/man/man1
+  make prefix=$PKG/usr install
+}

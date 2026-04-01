@@ -1,0 +1,8 @@
+186f12f4cbdb510acff893d4b411ed1c  big_pt.patch
+0a4dbdc46db2a3671528ee2b7fd2b854  largerthan2gb.patch
+b318f44939ab6a8ac76420e8fed2ca45  mac-fdisk-0.1-headers.patch
+1c51b9dddaefa2eb879b6e544588a7c2  mac-fdisk-0.1_p16-ppc-inline.patch
+de7710807fb180c066bbd014f68e0d64  mac-fdisk-0.1_p16-ppc64.patch
+ac39a9ed979ffa426cc516f78e6f73ee  mac-fdisk-0.1_p18-lseek64.patch
+4fa9e40c6f06def48286fec018841d2c  mac-fdisk_0.1-18.diff.gz
+24476329fe86ef6ccf222e233e2a99f1  mac-fdisk_0.1.orig.tar.gz
