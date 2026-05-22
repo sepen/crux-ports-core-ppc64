@@ -15,7 +15,7 @@ d:filesystem
 d:prt-get
 f:1c51b9dddaefa2eb879b6e544588a7c2:mac-fdisk/mac-fdisk-0.1_p16-ppc-inline.patch
 f:0a4dbdc46db2a3671528ee2b7fd2b854:mac-fdisk/largerthan2gb.patch
-f:af8f9ba2d51c8a165a1f6eca61598de1:mac-fdisk/Pkgfile
+f:5b7373ea655d46794b8f49d71692fc98:mac-fdisk/Pkgfile
 f:186f12f4cbdb510acff893d4b411ed1c:mac-fdisk/big_pt.patch
 f:4fa9e40c6f06def48286fec018841d2c:mac-fdisk/mac-fdisk_0.1-18.diff.gz
 f:de7710807fb180c066bbd014f68e0d64:mac-fdisk/mac-fdisk-0.1_p16-ppc64.patch
