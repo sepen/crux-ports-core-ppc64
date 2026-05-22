@@ -34,6 +34,7 @@ drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/blockdev
 -rwxr-xr-x	root/root	sbin/cfdisk
 -rwxr-xr-x	root/root	sbin/chcpu
+-rwxr-xr-x	root/root	sbin/copyfilerange
 -rwxr-xr-x	root/root	sbin/ctrlaltdel
 -rwxr-xr-x	root/root	sbin/fdisk
 -rwxr-xr-x	root/root	sbin/findfs
@@ -74,6 +75,7 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/fallocate
 -rwxr-xr-x	root/root	usr/bin/fincore
 -rwxr-xr-x	root/root	usr/bin/flock
+-rwxr-xr-x	root/root	usr/bin/getino
 -rwxr-xr-x	root/root	usr/bin/getopt
 -rwxr-xr-x	root/root	usr/bin/hardlink
 -rwxr-xr-x	root/root	usr/bin/hexdump
@@ -103,6 +105,7 @@ lrwxrwxrwx	root/root	usr/bin/linux64 -> setarch
 -rwxr-xr-x	root/root	usr/bin/mesg
 -rwxr-xr-x	root/root	usr/bin/namei
 -rwxr-xr-x	root/root	usr/bin/nsenter
+-rwxr-xr-x	root/root	usr/bin/pg
 lrwxrwxrwx	root/root	usr/bin/ppc -> setarch
 lrwxrwxrwx	root/root	usr/bin/ppc32 -> setarch
 lrwxrwxrwx	root/root	usr/bin/ppc64 -> setarch
@@ -115,10 +118,12 @@ lrwxrwxrwx	root/root	usr/bin/ppc64 -> setarch
 -rwxr-xr-x	root/root	usr/bin/scriptreplay
 -rwxr-xr-x	root/root	usr/bin/setarch
 -rwxr-xr-x	root/root	usr/bin/setpgid
+-rwxr-xr-x	root/root	usr/bin/setpriv
 -rwxr-xr-x	root/root	usr/bin/setsid
 -rwxr-xr-x	root/root	usr/bin/setterm
 -rwxr-xr-x	root/root	usr/bin/taskset
 -rwxr-xr-x	root/root	usr/bin/uclampset
+-rwxr-xr-x	root/root	usr/bin/ul
 lrwxrwxrwx	root/root	usr/bin/uname26 -> setarch
 -rwxr-xr-x	root/root	usr/bin/unshare
 -rwxr-xr-x	root/root	usr/bin/utmpdump
@@ -161,13 +166,13 @@ drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/mount.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/smartcols.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/uuid.pc
-drwxr-xr-x	root/root	usr/lib/python3.10/
-drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/
-drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/libmount/
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/libmount/__init__.py
-drwxr-xr-x	root/root	usr/lib/python3.10/site-packages/libmount/__pycache__/
--rw-r--r--	root/root	usr/lib/python3.10/site-packages/libmount/__pycache__/__init__.cpython-310.pyc
--rwxr-xr-x	root/root	usr/lib/python3.10/site-packages/libmount/pylibmount.cpython-310-powerpc64-linux-gnu.so
+drwxr-xr-x	root/root	usr/lib/python3.12/
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/libmount/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/libmount/__init__.py
+drwxr-xr-x	root/root	usr/lib/python3.12/site-packages/libmount/__pycache__/
+-rw-r--r--	root/root	usr/lib/python3.12/site-packages/libmount/__pycache__/__init__.cpython-312.pyc
+-rwxr-xr-x	root/root	usr/lib/python3.12/site-packages/libmount/pylibmount.cpython-312-powerpc64-linux-gnu.so
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/addpart
 -rwxr-xr-x	root/root	usr/sbin/delpart
@@ -189,6 +194,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/colcrt.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/colrm.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/column.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/copyfilerange.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/coresched.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/dmesg.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/eject.1.gz
@@ -198,6 +204,7 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/fallocate.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/fincore.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/flock.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/getino.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/getopt.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/hardlink.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/hexdump.1.gz
