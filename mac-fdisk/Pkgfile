@@ -13,9 +13,10 @@ source=(http://ftp.us.debian.org/debian/pool/main/m/${name}/${name}_${version}.o
   big_pt.patch ${name}-${version}_p16-ppc-inline.patch ${name}-${version}_p18-lseek64.patch)
 
 build() {
+  ls
   cd $name-$version.orig
 
-  gunzip $SRC/mac-fdisk_0.1-18.diff.gz
+  gunzip $SRC/${name}_${version}-18.diff.gz
   patch -p1 -i $SRC/${name}_${version}-18.diff
   patch -p1 -i $SRC/largerthan2gb.patch
   patch -p1 -i $SRC/${name}-${version}-headers.patch
@@ -31,6 +32,3 @@ build() {
   gzip pdisk.8
   install -Dm 644 pdisk.8.gz $PKG/usr/share/man/man8/pdisk.8.gz
 }
-
-
-mac-fdisk_0.1-18.diff
