@@ -29,10 +29,10 @@ f:78f62461eb778cea149a4f9966ea0c91:kbd/.footprint
 f:af467f77e3744eae7864755bf1bc2dd5:libcap/Pkgfile
 f:0f7cf4614c96b9aa1fa582848089e253:libcap/.md5sum
 f:09b694ce5a83a1548f7ebfcc41d99cd7:libcap/.footprint
-f:c04c497e15c1e9b60bc8d6ca8d8733b7:util-linux/Pkgfile
+f:9049a25d3b84b5618b0ffe846b0b1c04:util-linux/Pkgfile
 f:8baff048c45cabe3fefdd36a93bda7a2:util-linux/bits
-f:31804265336eb47772a00780c568ce06:util-linux/.md5sum
-f:2477d66a3f62e0035f3d3775d6f1812d:util-linux/.footprint
+f:b10560902a8d666d29c61ada911b6166:util-linux/.md5sum
+f:899bbedade10ecc77bbb41bc2587a848:util-linux/.footprint
 f:6e3990d2651e7617bb7aa74509ace2d2:gcc/Pkgfile
 f:f4f22eabd23ea90f7ca1739a29fa2728:gcc/.md5sum
 f:7c9128522053af79791bcfdd55834c2a:gcc/gcc-nocheck-fixincludes.patch
