@@ -38,8 +38,8 @@ f:f4f22eabd23ea90f7ca1739a29fa2728:gcc/.md5sum
 f:7c9128522053af79791bcfdd55834c2a:gcc/gcc-nocheck-fixincludes.patch
 f:43f1ffdbfab50eb0e497cc80d7b75528:gcc/.footprint
 f:043dc64391b27532df39a2b979680178:pkgutils/pkgmk.conf
-f:96224150d97a1a476f0dd5b32eb17639:pkgutils/Pkgfile
-f:f3a1072d3b7f8ad6bd3af78857ccf2d7:pkgutils/.md5sum
+f:ab8369cf155e20ee5ae6981d3222ddb5:pkgutils/Pkgfile
+f:cfd036bad906106ddc247c4927a9b12e:pkgutils/.md5sum
 f:0e1717fd1eeb62d8fce0c23682e9b337:pkgutils/.footprint
 f:518de5e52f9166e58ed613a0d636e774:glibc/locale.gen.in
 f:96156bec8e05de67384dc93e72bdc313:glibc/host.conf
