@@ -100,8 +100,8 @@ f:dc4ff0c96d8dcd2141febc8b766e9a6b:filesystem/shells
 f:93464384634f815bf46a995f74823c5e:filesystem/passwd
 f:3479722405f9366edd24b9a3dce949f6:filesystem/.footprint
 f:5536fff65be51e094b05a2c051c95364:prt-get/README
-f:77f47c1a65ea88a6dc9ddcb3478befaf:prt-get/Pkgfile
-f:2735e69dbb2ffaba20787f74759478c2:prt-get/.md5sum
+f:6d74be7094e462b23f068cf97392e395:prt-get/Pkgfile
+f:2a5a02b21c55fb58c99a8c7847d19ed2:prt-get/.md5sum
 f:50bd6dfbd51b38cf3194c90b121bd80e:prt-get/prt-get.conf
 f:ac750b56369121ca6aad64dd4c03671b:prt-get/prt-get.aliases
 f:077fea960d8a490412eed744ce9bcc40:prt-get/.footprint
